@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+
+<div id="app">
+    <div @click="divclick">
+        <button click.stop="btnclick">按钮</button>
+        <input type="text" @keyup="keyup">
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script>
+    const app=new Vue({
+        el:'#app',
+        data:{
+            message:'wwww'
+        },
+        methods:{
+            btnclick(){
+                console.log("btnclick");
+            },
+            divclick(){
+                console.log("divclick");
+            },
+            keyup(){
+                
+                console.log("keyup");
+            }
+        }
+    })
+</script>
+</body>
+</html>
